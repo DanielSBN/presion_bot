@@ -18,12 +18,13 @@ module.exports = [
     'dialga-palkia-ventana.jfif',
     'dialga-primigenio.jfif',
     'dialga-serio.jfif',
+    'dialga-tenia.jpg',
     'dialga-tonto.png',
     'dialga-ya.jfif',
     'palkia.jfif',
     'palkia-again.jfif',
     'pikachu-giratina.jfif',
-    'scooby-doo.jfif',
+    'scooby-doo.jpg',
     'shrek.jfif',
     'simpson.jfif'
 ]

@@ -27,7 +27,10 @@ bot.onText(/.*\b([pP][rR][eE][sS][iI][oOóÓ][nN]).*/, (msg, match) => {
     // send back the matched "whatever" to the chat
     //bot.sendMessage(chatId, resp);
     const path = './img/' + names[idx];
-    bot.sendPhoto(chatId, path);
+    const options = {
+        reply_to_message_id: msg.message_id
+    }
+    bot.sendPhoto(chatId, path, options);
     if (names[idx] == 'corviknight.jfif') {
         bot.sendPhoto(chatId, './img/corviknight2.jfif');
     }
