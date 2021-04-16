@@ -1,5 +1,6 @@
 module.exports = [
     'appa.jfif',
+    'batman.jpg',
     'corviknight.jfif',
     'cosmo-wanda.jpg',
     'dialga.jfif',
