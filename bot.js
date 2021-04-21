@@ -9,21 +9,23 @@ let anterior = -1;
 let idx;
 
 // Si alguien dice una palabra que empiece con "presion", el bot envía una imagen como respuesta
-bot.onText(/.*\b([pP][rR][eE][sS][iI][oOóÓ][nN]).*/, (msg, match) => {
+bot.onText(/.*\b([pP][rR][eE][sS][iI][oOóÓ][nN]).*/, async (msg, match) => {
     const chatId = msg.chat.id;
 
     do {
         idx = Math.floor(Math.random() * (names.length - 1));
     } while (idx == anterior);
 
-    let rep = bot.sendPhoto(
+    let path = './img/' + names[idx];
+
+    let rep = await bot.sendPhoto(
         chatId,
-        './img/' + names[idx],
+        path,
         {
             reply_to_message_id: msg.message_id
         },
         {
-            contentType: 'image/' + path.split('.')[1]
+            contentType: 'image/' + path.split('.')[2]
         }
     );
 
