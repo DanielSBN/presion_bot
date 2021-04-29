@@ -44,3 +44,14 @@ bot.onText(/.*\b([pP][rR][eE][sS][iI][oOóÓ][nN]).*/, async (msg, match) => {
 
     anterior = idx;
 });
+
+// Si alguien usa puntos suspensivos, el bot les hace saber que están prohibidos
+bot.onText(/.*\.\.\..*/, async (msg, match) => {
+    bot.sendMessage(
+        msg.chat.id,
+        'LOS PUNTOS SUSPENSIVOS ESTÁN PROHIBIDOS',
+        {
+            reply_to_message_id: msg.message_id
+        }
+    )
+})
